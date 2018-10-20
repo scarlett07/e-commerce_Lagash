@@ -34,7 +34,7 @@ export default class Example extends React.Component {
                         <th>Total {order.order.map(item=>item.price*item.quantity)}</th>
                         <th>{}</th> */}
                         <th><Button color="info"
-                            onClick={() => this.handleOrder()}>Comprar Productos
+                            >Comprar Productos
                             </Button>
                         </th>
                     </tr>
