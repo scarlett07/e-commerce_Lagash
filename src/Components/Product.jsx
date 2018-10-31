@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { CardImg, Button, Table, Media } from 'reactstrap';
+import { Button, Table, Media } from 'reactstrap';
 
 //Tabla de productos 
 export default class Product extends Component {

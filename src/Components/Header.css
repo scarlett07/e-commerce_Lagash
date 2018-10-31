@@ -1,0 +1,8 @@
+.header {
+    display: flex;
+    align-items: center;
+}
+
+#root>div>div:nth-child(1)>nav>a>img{
+    width: 30%;
+}

@@ -17,11 +17,8 @@ class ShoppingCartPage extends Component {
         this.removeFromOrder = this.removeFromOrder.bind(this);
     }
 
-               // update localStorage localStorage.setItem(key, value);
-    
-
     upDateOrder(item, price, quantity, image) {
-        const ordered = [{ item: item, price: price, quantity: quantity, image:image}];
+        const ordered = [{ item: item, price: price, quantity: quantity, image: image }];
         this.setState({
             order: this.state.order.concat(ordered)
         })
@@ -36,6 +33,7 @@ class ShoppingCartPage extends Component {
     }
 
     componentWillMount() {
+        //Consulta de API, con una pagina que resuelve el error de cross-origin read blocking
         fetch('https://cors-anywhere.herokuapp.com/https://maxmvpstorage.blob.core.windows.net/drops/products-demo.json')
 
             .then((response) => { return response.json() })
@@ -46,7 +44,7 @@ class ShoppingCartPage extends Component {
     }
 
     render() {
-        reactLocalStorage.setObject('order', { 'order' : this.state.order });
+        reactLocalStorage.setObject('order', { 'order': this.state.order });
         return (
             <div>
                 <Product Products={this.state.items}
